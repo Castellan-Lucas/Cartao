@@ -1,0 +1,132 @@
+// Formulario.sass
+
+// Define primary colors
+$primary-color:rgba(197, 39, 245, 0.8)
+$secondary-color: #6c757d
+
+// Define font family and size
+$font-family: Space Grotesk, Space Grotesk
+$font-size: 16px
+
+.container-form
+  position: relative
+  left: 20%
+  top: -460px
+  max-width: 400px
+  font-family: Space Grotesk
+  
+
+.conteudo-form
+  display: flex
+
+
+label
+  font-weight: bold
+  font-size: 15px
+
+input
+  margin-bottom: 16px
+  border: 1px solid $secondary-color
+  border-radius: 4px
+  font-family: $font-family
+  font-size: $font-size
+
+.date-container
+  display: flex
+  gap: 16px
+
+  label
+    flex: 1
+
+  input
+    flex: 2
+
+.cvc
+    width: 70px
+.date
+    width: 70px
+
+button
+  padding: 20px 30px
+  background-color: $primary-color
+  color: #fff
+  border: none
+  border-radius: 4px
+  font-family: $font-family
+  font-size: $font-size
+  cursor: pointer
+
+  &:hover
+    background-color: ($primary-color, 10%)
+// Formulario.sass
+
+// Define primary colors
+$primary-color: rgba(55, 0, 71, 1)
+$secondary-color: #4f04664d
+
+// Define font family and size
+$font-family: Arial, sans-serif
+$font-size: 16px
+
+.container-form
+  max-width: 400px
+  margin: 0 auto
+  padding: 20px
+  border-radius: 8px
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+
+.conteudo-form
+  display: flex
+  flex-direction: column
+
+label
+  margin-bottom: 8px
+  font-weight: bold
+
+input
+  padding: 8px
+  margin-bottom: 16px
+  border: 1px solid $secondary-color
+  border-radius: 4px
+  font-family: $font-family
+  font-size: $font-size
+
+.date-container
+  display: flex
+  gap: 16px
+
+  label
+    flex: 1
+
+  input
+    flex: 2
+
+button
+  padding: 15px 25px
+  background-color: $primary-color
+  color: #fff
+  border: none
+  border-radius: 4px
+  font-family: $font-family
+  font-size: $font-size
+  cursor: pointer
+
+  &:hover
+    background-color: darken(#8200aa, 10%)
+
+.engloba
+  width: 700px
+  height: 650px
+  
+.conteudo-front
+   position: relative
+    z-index: 1
+    margin-top: 60px
+    left: 200px
+
+.conteudo-back
+    position: relative
+    z-index: 1
+    margin-top: 60px
+    left: 200px
+    
