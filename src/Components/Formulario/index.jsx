@@ -4,6 +4,7 @@ import CardFront from "../Cardfront";
 import "../Formulario/Formulario.sass";
 import Obrigado from "../Obrigado";
 
+
 export default function Formulario() {
   const [nomec, setNome] = useState("");
   const [nmCartao, setNmCartao] = useState("");
@@ -11,14 +12,16 @@ export default function Formulario() {
   const [cvc, setCvc] = useState("");
   const [mostrarObrigado, setMostrarObrigado] = useState(false);
 
+   const date = {
+     nomec,
+     nmCartao,
+     data,
+     cvc,
+   };
+
   const onSubmit = (e) => {
     e.preventDefault();
-    const date = {
-      nomec,
-      nmCartao,
-      data,
-      cvc
-    }
+   
 
     if (!nomec || !nmCartao || !data || !cvc) {
       alert("Preencha todos os campos obrigatórios!");
@@ -28,9 +31,16 @@ export default function Formulario() {
       setNmCartao("");
       setData("");
       setCvc("");
+      enviarls("Valores",JSON.stringify(date))
+    
+      
     }
     console.log(date)
   };
+    const enviarls = (chave, valor) => {
+      localStorage.setItem(chave, valor);
+    };
+
 
   return (
     <div>
@@ -43,7 +53,11 @@ export default function Formulario() {
         </div>
       </div>
       {!mostrarObrigado ? (
-        <form className="container-form" onSubmit={onSubmit}>
+        <form
+          id="card-cartao-form"
+          className="container-form"
+          onSubmit={onSubmit}
+        >
           <div className="conteudo-form">
             <label>Nome do cartão </label>
             <input
@@ -82,7 +96,9 @@ export default function Formulario() {
                 onChange={(event) => setData(event.target.value)}
               />
             </div>
-            <button type="submit">Enviar</button>
+            <button onClick={enviarls} type="submit">
+              Enviar
+            </button>
           </div>
         </form>
       ) : (
