@@ -21,16 +21,11 @@ export default function Formulario() {
 
   const onSubmit = (e) => {
     e.preventDefault();
-   
 
     if (!nomec || !nmCartao || !data || !cvc) {
       alert("Preencha todos os campos obrigatórios!");
     } else {
       setMostrarObrigado(true);
-      setNome("");
-      setNmCartao("");
-      setData("");
-      setCvc("");
       enviarls("Valores",JSON.stringify(date))
     
       
