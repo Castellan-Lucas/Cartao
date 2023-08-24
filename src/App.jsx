@@ -13,7 +13,6 @@ function App() {
 
   return (
     <>
-      {/* logica que ao enviar formulario ele troca o state e exibe outro componente */}
       <div className="container-app">
         <Banner />
         <div>
