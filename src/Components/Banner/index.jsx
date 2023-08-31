@@ -4,7 +4,7 @@ export default function Banner() {
   
   return (
     <div >
-      <img className="img-banner" src="./public/img/bg-main-desktop.png"></img>
+      <img className="img-banner" src="src/public/img/bg-main-desktop.png"></img>
     </div>
   );
 }
